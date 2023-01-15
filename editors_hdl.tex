@@ -1,0 +1,270 @@
+\pdfminorversion=4
+\documentclass[aspectratio=169]{beamer}
+
+\mode<presentation>
+{\usetheme{metropolis}
+%\usecolortheme{spruce}
+\usecolortheme{default}
+}
+%\setbeamertemplate{headline}{}
+  %\setbeamercovered{transparent}
+  %\expandafter\def\expandafter\insertshorttitle\expandafter{%
+  %\insertshorttitle\hfill%
+  %\insertframenumber\,/\,\inserttotalframenumber}
+%}
+
+
+
+%\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english, russian]{babel}
+
+\usepackage{times}
+\usepackage{amsthm}
+\usepackage{graphicx}
+\usepackage{subfigure}
+\usepackage[mathscr]{eucal}
+\usepackage{longtable}
+\usepackage[all]{xy}
+\usepackage{color}
+\usepackage{colortbl}
+\usepackage{multirow}
+\usepackage{wrapfig}
+\usepackage{ragged2e}
+\usepackage{epstopdf}
+\usepackage{lmodern}
+
+\usepackage{tempora}
+
+
+\usepackage{animate}
+
+\usepackage{minted}
+
+\usepackage[]{xcolor}
+
+\definecolor{indigo}{rgb}{0.0, 0.25, 0.42}
+\definecolor{arsenic}{rgb}{0.23, 0.27, 0.29}
+\definecolor{bluegray}{rgb}{0.4, 0.6, 0.8}
+\definecolor{cadet}{rgb}{0.33, 0.41, 0.47}
+\definecolor{charcoal}{rgb}{0.21, 0.27, 0.31}
+\definecolor{glaucous}{rgb}{0.38, 0.51, 0.71}
+\definecolor{airforceblue}{rgb}{0.36, 0.54, 0.66}
+\definecolor{darkgreen}{rgb}{0.0, 0.2, 0.13}
+
+
+\metroset{sectionpage=none, block=fill}
+
+%\setbeamercolor{frametitle}{bg=charcoal,fg=white}
+%\setbeamercolor{section in head/foot}{bg=Brown}
+%\setbeamercolor{author in head/foot}{bg=Brown}
+%\setbeamercolor{date in head/foot}{fg=Brown}
+
+%\setbeamercolor{block title}{bg = airforceblue!80, fg=black}
+%\setbeamercolor{block body}{bg=airforceblue!30}
+
+\defbeamertemplate*{frametitle}{}{%
+    \leavevmode%
+    \hbox to \paperwidth{%
+    \begin{beamercolorbox}[wd=\paperwidth,ht=2ex,dp=3pt,left]{frametitle}%
+        \ \insertframetitle
+    \end{beamercolorbox}}
+}
+
+
+
+
+%%%%%%%%%%%% TITLE PAGE %%%%%%%%%%%%%%%%%%
+\title[]{\bf Эффективное использование текстовых редакторов для HDL программирования}
+%\author[]{S. Kohani, K. Nishimura, V. Shebalin$^*$}\institute[]{\inst{}
+\author{V. Shebalin}
+\institute{\inst{}
+%Budker Institute of Nuclear Physics\\
+{\textit {}}
+}
+\date[]{December 1,  2022}
+
+%\pgfdeclareimage[height=2.5cm]{mylogo}{Belle-logo.eps}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% TITLE PAGE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\frame{\titlepage
+%\centering \includegraphics[scale=0.3]{figs/uh.png}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\footnotesize
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Редакторы}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{\secname}
+
+  \begin{columns}
+    \begin{column}{0.5\textwidth}
+  \begin{itemize}
+    \item {\bf Vim/NeoVim}
+    \item {\bf VSCode} + TerosHDL
+    \item {\bf Emacs} + verilog-mode/vhdl-mode
+    \item {\bf Notepad++}, {\bf Sublime Text}, ...
+  \end{itemize}
+      
+    \end{column}
+    \begin{column}{0.5\textwidth}
+  \begin{block}{What we will be using}
+    \begin{itemize}
+      \item NeoVim + numerous plugins
+      \item VSCode + TerosHDL + Python(Microsoft) \\
+        see \url{https://terostechnology.github.io}
+    \end{itemize}
+    
+  \end{block}
+      
+    \end{column}
+  \end{columns}
+
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Основные функции}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{\secname}
+  \begin{columns}
+    \begin{column}{0.5\textwidth}
+  \begin{block}{General}
+    \begin{itemize}
+        \item Fast file navigation
+        \item Fast buffers/files switching
+        \item Fast navigation through the file
+        \item Fast search/replace
+        \item Folding
+        \item Window splitting
+        \item Multi-cursor editing
+        \item Git integration
+    \end{itemize}
+  \end{block}
+      
+    \end{column}
+
+
+    \begin{column}{0.5\textwidth}
+
+      \begin{block}{Language specific}
+        \begin{itemize}
+          \item Syntax highlighting
+          \item Code formatting
+          \item Snippets/Templates
+          \item Syntax checking
+          \item Popup documentation
+          \item Go to definition
+          \item Tags
+        \end{itemize}
+      \end{block}
+      \begin{block}{HDL specific}
+        \begin{itemize}
+          \item Automatic generation of entity/module instantiations
+          \item Automatic generation of the testbenches
+        \end{itemize}
+      \end{block}
+      
+    \end{column}
+  \end{columns}
+    
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Files navigation}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{\secname}
+
+  \begin{block}{Files browsing}
+    \begin{itemize}
+      \item {\bf NerdTree}\\ \url{https://github.com/preservim/nerdtree}
+    \end{itemize}
+  \end{block}
+
+  \begin{block}{Fuzzy find }
+    Extremely fast way to open files, navigate buffers, and so on.
+    \begin{itemize}
+      \item {\bf CtrlP}\\ \url{https://github.com/kien/ctrlp.vim} 
+      \item {\bf fzf.vim}\\ \url{https://github.com/junegunn/fzf.vim} 
+      \item {\bf Telescope}\\ \url{https://github.com/nvim-telescope/telescope.nvim} 
+    \end{itemize}
+  \end{block}
+    
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Syntax checking}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{\secname}
+
+  \begin{block}{Vim syntax checkers}
+  \begin{itemize}
+    \item <LeftMouse>
+    \item CoC  \\ \url{https://github.com/neoclide/coc.nvim} 
+    \item ALE \\ \url{https://github.com/dense-analysis/ale}
+    \item Syntastic \\ \url{https://github.com/vim-syntastic/syntastic}
+  \end{itemize}
+  \end{block}
+
+  \begin{block}{hdl$\_$checker}
+    \begin{itemize}
+     \item HDL language server  for VHDL/Verilog/SystemVerilog
+     \item Supports Modelsim/Questa, GHDL, Vivado Simulator
+     \item \url{https://github.com/suoto/hdl_checker}
+    \end{itemize}
+    
+  \end{block}
+    
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Git integration}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{\secname}
+  \begin{itemize}
+    \item \url{https://github.com/airblade/vim-gitgutter}
+    \item \url{https://github.com/tpope/vim-fugitive}
+  \end{itemize}
+  Show last changes, diff with a given commit, show logs and more.
+    
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{TerosHDL amazing features}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{\secname}
+
+  \begin{itemize}
+    \item State machine viewer
+    \item Templates : components/entities/testbenches/cocotb
+    \item Hierarchy view/dependencies graph
+    \item Schematic viewer (synthesis with YoSys)
+    \item Automatic documentation (with wavedrom/bitfield integration) \\
+      Wavedrom (\url{https://wavedrom.com}) is a powerful tool to draw timing diagrams.\\
+      It has online editor: \url{https://wavedrom.com/editor.html}.
+    \item Integration with Modelsim, Quartus, Vivado, Radiant, and everything.
+  \end{itemize}
+    
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\end{document}
+
+
+
+
