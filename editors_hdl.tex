@@ -181,13 +181,30 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Fast navigation through file and editing}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{\secname}
+  \begin{itemize}
+    \item Fast search -- Vim builtin. 
+    \item Sessions -- remember opened files, splits, settings, etc (mksession).
+    \item Window splitting. 
+    \item Multiple cursor editing \url{https://github.com/terryma/vim-multiple-cursors}
+    \item Vim easymotion \url{https://github.com/easymotion/vim-easymotion}
+  \end{itemize}
+  	
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section*{Files navigation}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}{\secname}
 
   \begin{block}{Files browsing}
     \begin{itemize}
+      \item {Vim native way :Explore, :Sex, :Vex}
       \item {\bf NerdTree}\\ \url{https://github.com/preservim/nerdtree}
+      \item \textbf{nnn} \url{https://github.com/mcchrish/nnn.vim}
     \end{itemize}
   \end{block}
 
@@ -204,16 +221,34 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Other fuzzy find features}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{\secname}
+  All of ctrlp, fzf.vim, and Telescope can do this: 
+  \begin{itemize}
+    \item Fast windows/buffers switching. 
+    \item Fast tags navigation. 
+    \item Browse syntax check diagnostics. 
+    \item Commands history. 
+    \item Git branches/commits.
+  \end{itemize}
+  	
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section*{Syntax checking}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}{\secname}
 
-  \begin{block}{Vim syntax checkers}
+  \begin{block}{Vim/NeoVim syntax checkers}
+    Provide syntax check, autocompletion, diagnostics, go to definition, show documentation, etc.
   \begin{itemize}
-    \item <LeftMouse>
     \item CoC  \\ \url{https://github.com/neoclide/coc.nvim} 
     \item ALE \\ \url{https://github.com/dense-analysis/ale}
     \item Syntastic \\ \url{https://github.com/vim-syntastic/syntastic}
+    \item NeoVim builtin LSP
   \end{itemize}
   \end{block}
 
@@ -235,10 +270,10 @@
 \begin{frame}{\secname}
   \begin{block}{Vim plugins}
     \begin{itemize}
-      \item Vim-snippets
-      \item Ultinsips
-      \item Snipmate
-      \item Neosnippets
+      \item Vim-snippets \url{https://github.com/honza/vim-snippets}
+      \item Ultinsips \url{https://github.com/SirVer/ultisnips}
+      \item Snipmate  \url{https://github.com/garbas/vim-snipmate}
+      \item Neosnippet \url{https://github.com/Shougo/neosnippet.vim} 
     \end{itemize} 
   \end{block}
 
@@ -254,6 +289,29 @@
     
   \end{block}
     
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{CTags}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{\secname}
+  \textbf{Ctags} is a programming tool that generates an index (or tag) file of names found in source and header files of various programming languages to aid code comprehension. (c)Wikipedia
+  \begin{itemize}
+
+    \item Exuberant ctags \url{https://ctags.sourceforge.net}
+    \item Universal ctags \url{https://github.com/universal-ctags/ctags}
+
+  \end{itemize}
+
+  \begin{block}{Vim plugins}
+    \begin{itemize}
+      \item vim-tagbar \url{https://github.com/universal-ctags/ctags}
+      \item Vista.vim \url{https://github.com/liuchengxu/vista.vim}
+    \end{itemize} 
+  \end{block}
+  Fast navigation through \textit{tags} with FZF!
+  	
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -276,6 +334,9 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}{\secname}
 
+  See \url{https://terostechnology.github.io/terosHDLdoc/} for the full list of features
+  with gif previews.
+
   \begin{itemize}
     \item State machine viewer
     \item Templates : components/entities/testbenches/cocotb
@@ -287,6 +348,27 @@
     \item Integration with Modelsim, Quartus, Vivado, Radiant, and everything.
   \end{itemize}
     
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Some other resources}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{\secname}
+  \begin{block}{Vim}
+    \begin{itemize}
+      \item \url{https://www.vim.org/}
+      \item \url{https://vimawesome.com/}
+    \end{itemize}
+  \end{block}
+
+  \begin{block}{VsCode}
+    \begin{itemize}
+      \item \url{https://www.youtube.com/@terostechnology5520}
+      \item Presentation ``TerosHDL: an open source IDE for FPGA developers'' \url{https://www.youtube.com/watch?v=_wxTjOSO5oY}
+    \end{itemize}
+  \end{block}
+  	
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
