@@ -165,7 +165,7 @@
           \item Code formatting
           \item Snippets/Templates
           \item Syntax checking
-          \item Popup documentation
+          \item Pop-up documentation
           \item Go to definition
           \item Tags
         \end{itemize}
@@ -256,10 +256,10 @@
   \begin{block}{Vim/NeoVim syntax checkers}
     Provide syntax check, autocompletion, diagnostics, go to definition, show documentation, etc.
   \begin{itemize}
-    \item CoC  \\ \myurl{https://github.com/neoclide/coc.nvim} 
-    \item ALE \\ \myurl{https://github.com/dense-analysis/ale}
-    \item Syntastic \\ \myurl{https://github.com/vim-syntastic/syntastic}
-    \item NeoVim builtin LSP
+    \item \textbf{CoC}  \\ \myurl{https://github.com/neoclide/coc.nvim} 
+    \item \textbf{ALE} \\ \myurl{https://github.com/dense-analysis/ale}
+    \item \textbf{Syntastic} \\ \myurl{https://github.com/vim-syntastic/syntastic}
+    \item \textbf{NeoVim} builtin LSP
   \end{itemize}
   \end{block}
 
@@ -359,6 +359,24 @@
     \end{column}
   \end{columns}
     
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Git integration with Fuzzy Find}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{\secname}
+
+  \begin{tabular}{ll}
+    :GBranches & Open fzf-preview window with a list of branches \\
+               &   where one can switch, create, merge, delete branches interactively\\
+    :Commits   & Show commits with fuzzy find through them and preview of the changes \\
+    :BCommits  & Show commits log for the current buffer\\
+    :GTags     & List of git tags \\
+    :GFiles    & List of tracked files \\
+
+  \end{tabular}
+  	
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
