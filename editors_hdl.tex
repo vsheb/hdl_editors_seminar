@@ -41,6 +41,9 @@
 
 \usepackage{minted}
 
+\usepackage{listings}
+%\lstset{language=bash,keywordstyle={\bfseries \color{blue}}}
+
 \usepackage[]{xcolor}
 
 \definecolor{indigo}{rgb}{0.0, 0.25, 0.42}
@@ -72,7 +75,7 @@
 }
 
 
-
+\newcommand{\myurl}[1]{{\color{indigo}\url{#1}}}%
 
 %%%%%%%%%%%% TITLE PAGE %%%%%%%%%%%%%%%%%%
 \title[]{\bf Efficient use of a text editor for HDL coding}
@@ -121,7 +124,7 @@
     \begin{itemize}
       \item NeoVim + numerous plugins
       \item VSCode + TerosHDL + Python(Microsoft) \\
-        see \url{https://terostechnology.github.io}
+        see \myurl{https://terostechnology.github.io}
     \end{itemize}
     
   \end{block}
@@ -185,11 +188,11 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}{\secname}
   \begin{itemize}
-    \item Fast search -- Vim builtin. 
+    \item Fast search -- Vim built-in. 
     \item Sessions -- remember opened files, splits, settings, etc (mksession).
     \item Window splitting. 
-    \item Multiple cursor editing \url{https://github.com/terryma/vim-multiple-cursors}
-    \item Vim easymotion \url{https://github.com/easymotion/vim-easymotion}
+    \item Multiple cursor editing \myurl{https://github.com/terryma/vim-multiple-cursors}
+    \item Vim easymotion \myurl{https://github.com/easymotion/vim-easymotion}
   \end{itemize}
   	
 \end{frame}
@@ -203,17 +206,17 @@
   \begin{block}{Files browsing}
     \begin{itemize}
       \item {Vim native way :Explore, :Sex, :Vex}
-      \item {\bf NerdTree}\\ \url{https://github.com/preservim/nerdtree}
-      \item \textbf{nnn} \url{https://github.com/mcchrish/nnn.vim}
+      \item {\bf NerdTree}\\ \myurl{https://github.com/preservim/nerdtree}
+      \item \textbf{nnn} \myurl{https://github.com/mcchrish/nnn.vim}
     \end{itemize}
   \end{block}
 
   \begin{block}{Fuzzy find }
     An extremely fast way to open files, navigate buffers, and so on.
     \begin{itemize}
-      \item {\bf CtrlP}\\ \url{https://github.com/kien/ctrlp.vim} 
-      \item {\bf fzf.vim}\\ \url{https://github.com/junegunn/fzf.vim} 
-      \item {\bf Telescope}\\ \url{https://github.com/nvim-telescope/telescope.nvim} 
+      \item {\bf CtrlP}\\ \myurl{https://github.com/kien/ctrlp.vim} 
+      \item {\bf fzf.vim}\\ \myurl{https://github.com/junegunn/fzf.vim} 
+      \item {\bf Telescope}\\ \myurl{https://github.com/nvim-telescope/telescope.nvim} 
     \end{itemize}
   \end{block}
     
@@ -224,14 +227,22 @@
 \section*{Other fuzzy find features}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}{\secname}
-  All of ctrlp, fzf.vim, and Telescope can do this: 
-  \begin{itemize}
-    \item Fast windows/buffers switching. 
-    \item Fast tags navigation. 
-    \item Browse syntax check diagnostics. 
-    \item Commands history. 
-    \item Git branches/commits.
-  \end{itemize}
+  \begin{columns}
+    \begin{column}{0.5\textwidth}
+      All of fzf.vim, and Telescope can do this: 
+      \begin{itemize}
+        \item Fast windows/buffers switching. 
+        \item Fast tags navigation. 
+        \item Browse syntax check diagnostics. 
+        \item Commands history. 
+        \item Git branches/commits.
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.6\textwidth}
+      \includegraphics[width=1.0\textwidth]{figs/git_fzf_commits.png}
+      
+    \end{column}
+  \end{columns}
   	
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -245,9 +256,9 @@
   \begin{block}{Vim/NeoVim syntax checkers}
     Provide syntax check, autocompletion, diagnostics, go to definition, show documentation, etc.
   \begin{itemize}
-    \item CoC  \\ \url{https://github.com/neoclide/coc.nvim} 
-    \item ALE \\ \url{https://github.com/dense-analysis/ale}
-    \item Syntastic \\ \url{https://github.com/vim-syntastic/syntastic}
+    \item CoC  \\ \myurl{https://github.com/neoclide/coc.nvim} 
+    \item ALE \\ \myurl{https://github.com/dense-analysis/ale}
+    \item Syntastic \\ \myurl{https://github.com/vim-syntastic/syntastic}
     \item NeoVim builtin LSP
   \end{itemize}
   \end{block}
@@ -256,7 +267,7 @@
     \begin{itemize}
      \item HDL language server  for VHDL/Verilog/SystemVerilog
      \item Supports Modelsim/Questa, GHDL, Vivado Simulator
-     \item \url{https://github.com/suoto/hdl_checker}
+     \item \myurl{https://github.com/suoto/hdl_checker}
     \end{itemize}
     
   \end{block}
@@ -270,10 +281,10 @@
 \begin{frame}{\secname}
   \begin{block}{Vim plugins}
     \begin{itemize}
-      \item Vim-snippets \url{https://github.com/honza/vim-snippets}
-      \item Ultinsips \url{https://github.com/SirVer/ultisnips}
-      \item Snipmate  \url{https://github.com/garbas/vim-snipmate}
-      \item Neosnippet \url{https://github.com/Shougo/neosnippet.vim} 
+      \item Vim-snippets \myurl{https://github.com/honza/vim-snippets}
+      \item Ultinsips \myurl{https://github.com/SirVer/ultisnips}
+      \item Snipmate  \myurl{https://github.com/garbas/vim-snipmate}
+      \item Neosnippet \myurl{https://github.com/Shougo/neosnippet.vim} 
     \end{itemize} 
   \end{block}
 
@@ -282,9 +293,9 @@
       \item TerosHDL has templates for entity instances, testbenches, and cocotb tests.
       \item For Vim this plugin can generate entity/components instances: https://github.com/vim-scripts/VIP .
       \item There are a number of testbench generators on Github for instance: \\
-        \url{https://github.com/phillbush/tbgen}\\
-        \url{https://github.com/JC-LL/vhdl_tb}\\
-        \url{https://github.com/connorcl/testbench-gen}\\
+        \myurl{https://github.com/phillbush/tbgen}\\
+        \myurl{https://github.com/JC-LL/vhdl_tb}\\
+        \myurl{https://github.com/connorcl/testbench-gen}\\
     \end{itemize}
     
   \end{block}
@@ -299,15 +310,15 @@
   \textbf{Ctags} is a programming tool that generates an index (or tag) file of names found in source and header files of various programming languages to aid code comprehension. (c)Wikipedia
   \begin{itemize}
 
-    \item Exuberant ctags \url{https://ctags.sourceforge.net}
-    \item Universal ctags \url{https://github.com/universal-ctags/ctags}
+    \item Exuberant ctags \myurl{https://ctags.sourceforge.net}
+    \item Universal ctags \myurl{https://github.com/universal-ctags/ctags}
 
   \end{itemize}
 
   \begin{block}{Vim plugins}
     \begin{itemize}
-      \item vim-tagbar \url{https://github.com/universal-ctags/ctags}
-      \item Vista.vim \url{https://github.com/liuchengxu/vista.vim}
+      \item vim-tagbar \myurl{https://github.com/universal-ctags/ctags}
+      \item Vista.vim \myurl{https://github.com/liuchengxu/vista.vim}
     \end{itemize} 
   \end{block}
   Fast navigation through \textit{tags} with FZF!
@@ -319,22 +330,71 @@
 \section*{Git integration}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}{\secname}
+  \begin{columns}
+    \begin{column}{0.5\textwidth}
   \begin{itemize}
-    \item \url{https://github.com/airblade/vim-gitgutter}
-    \item \url{https://github.com/tpope/vim-fugitive}
+    \item \myurl{https://github.com/airblade/vim-gitgutter}
+      Marks modified lines of the current buffer.
+    \item \myurl{https://github.com/tpope/vim-fugitive} \\ 
+      \textit{``it's so awesome, it should be illegal''} \\(c) it's GitHub page.
   \end{itemize}
   Show last changes, diff with a given commit, show logs and more.
+      
+    \end{column}
+    \begin{column}{0.6\textwidth}
+      \begin{block}{Fugitive}
+        \begin{tabular}{ll}
+          :Git & Gives an \textbf{interactive}(!) version of the git status: \\
+               & can add/reset specific file,   \\
+               & open file, undo changes and everything. \\
+         :Gwrite & Stage the current file to the index. \\
+         :Gread  & Revert current file (git checkout). \\ 
+         :Gremove & Delete the current file and vim buffer. \\
+         :Gllog   & Git log. \\
+         :Gvdiffsplit & Open line by line diff in a vertical split.
+
+        \end{tabular}
+        
+      \end{block} 
+    \end{column}
+  \end{columns}
     
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Integration with terminal}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]{\secname}
+  \begin{block}{Vim}
+    \begin{itemize}
+      \item :terminal -- open built-in terminal
+      \item !command  -- execute command and put output into the quickfix window
+      \item \lstinline{:new | r ! command} -- execute command and put output into a new buffer
+      \item AsyncRun -- {\color{blue} \myurl{https://github.com/skywind3000/asyncrun.vim}} \\
+        Run shell comand in the background.  E.g. : \\
+        \lstinline{:AsyncRun make} -- do make in the background. \\
+        \lstinline{:AsyncRun git push} -- git push.\\
+        \lstinline{:AsyncRun -mode=term -pos=tab ./% } -- run current buffer and show output in the new tab\\
+     \lstinline{:AsyncRun -mode=term -pos=right ./% } -- run current buffer and show output on the right split\\
+    \end{itemize}
+  \end{block}	
+  \begin{block}{VSCode}
+    \begin{itemize}
+      \item VSCode has a built-in terminal window.
+      \item Can run commands asynchronously as well.
+    \end{itemize}
+    
+  \end{block}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section*{TerosHDL amazing features}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}{\secname}
 
-  See \url{https://terostechnology.github.io/terosHDLdoc/} for the full list of features
+  See \myurl{https://terostechnology.github.io/terosHDLdoc/} for the full list of features
   with gif previews.
 
   \begin{itemize}
@@ -343,8 +403,8 @@
     \item Hierarchy view/dependencies graph
     \item Schematic viewer (synthesis with YoSys)
     \item Automatic documentation (with wavedrom/bitfield integration) \\
-      Wavedrom (\url{https://wavedrom.com}) is a powerful tool to draw timing diagrams.\\
-      It has online editor: \url{https://wavedrom.com/editor.html}.
+      Wavedrom (\myurl{https://wavedrom.com}) is a powerful tool to draw timing diagrams.\\
+      It has online editor: \myurl{https://wavedrom.com/editor.html}.
     \item Integration with Modelsim, Quartus, Vivado, Radiant, and everything.
   \end{itemize}
     
@@ -352,20 +412,21 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section*{Some other resources}
+\section*{Some links}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}{\secname}
   \begin{block}{Vim}
     \begin{itemize}
-      \item \url{https://www.vim.org/}
-      \item \url{https://vimawesome.com/}
+      \item \myurl{https://www.vim.org/}
+      \item \myurl{https://vimawesome.com/}
+      \item Introduction to Vim in Russian \myurl{https://www.youtube.com/watch?v=jkxLIFVGfd4}
     \end{itemize}
   \end{block}
 
   \begin{block}{VsCode}
     \begin{itemize}
-      \item \url{https://www.youtube.com/@terostechnology5520}
-      \item Presentation ``TerosHDL: an open source IDE for FPGA developers'' \url{https://www.youtube.com/watch?v=_wxTjOSO5oY}
+      \item \myurl{https://www.youtube.com/@terostechnology5520}
+      \item Presentation ``TerosHDL: an open source IDE for FPGA developers'' \myurl{https://www.youtube.com/watch?v=_wxTjOSO5oY}
     \end{itemize}
   \end{block}
   	
