@@ -214,9 +214,12 @@
   \begin{block}{Fuzzy find }
     An extremely fast way to open files, navigate buffers, and so on.
     \begin{itemize}
-      \item {\bf CtrlP}\\ \myurl{https://github.com/kien/ctrlp.vim} 
-      \item {\bf fzf.vim}\\ \myurl{https://github.com/junegunn/fzf.vim} 
-      \item {\bf Telescope}\\ \myurl{https://github.com/nvim-telescope/telescope.nvim} 
+      \item {\bf CtrlP} -- minimalistic fuzzy-find
+        \\ \myurl{https://github.com/ctrlpvim/ctrlp.vim} 
+      \item {\bf fzf.vim} -- based on fzf program
+        \\ \myurl{https://github.com/junegunn/fzf.vim} 
+      \item {\bf Telescope} (NeoVim only) -- utilizes most modern NeoVim features, super extensible and powerful.
+        \\ \myurl{https://github.com/nvim-telescope/telescope.nvim} 
     \end{itemize}
   \end{block}
     
@@ -229,13 +232,13 @@
 \begin{frame}{\secname}
   \begin{columns}
     \begin{column}{0.5\textwidth}
-      All of fzf.vim, and Telescope can do this: 
+      \textbf{fzf.vim} and \textbf{Telescope} can do: 
       \begin{itemize}
         \item Fast windows/buffers switching. 
-        \item Fast tags navigation. 
+        \item Fast navigation between language objects(functions/entities/classes) with help of ctags. 
         \item Browse syntax check diagnostics. 
-        \item Commands history. 
-        \item Git branches/commits.
+        \item Search commands history. 
+        \item List/search Git branches/commits.
       \end{itemize}
     \end{column}
     \begin{column}{0.6\textwidth}
@@ -256,10 +259,13 @@
   \begin{block}{Vim/NeoVim syntax checkers}
     Provide syntax check, autocompletion, diagnostics, go to definition, show documentation, etc.
   \begin{itemize}
-    \item \textbf{CoC}  \\ \myurl{https://github.com/neoclide/coc.nvim} 
-    \item \textbf{ALE} \\ \myurl{https://github.com/dense-analysis/ale}
-    \item \textbf{Syntastic} \\ \myurl{https://github.com/vim-syntastic/syntastic}
-    \item \textbf{NeoVim} builtin LSP
+    \item \textbf{CoC} -- a little slow, great autocompletion, not easy to configure.
+      \\ \myurl{https://github.com/neoclide/coc.nvim} 
+    \item \textbf{ALE} -- minimum configuration needed, fast linting, not good autocompletion.
+      \\ \myurl{https://github.com/dense-analysis/ale}
+    \item \textbf{Syntastic} -- no longer maintained
+      \\ \myurl{https://github.com/vim-syntastic/syntastic}
+    \item \textbf{NeoVim} builtin LSP -- fast, nice looking error notifications, difficult to configure.
   \end{itemize}
   \end{block}
 
@@ -321,7 +327,7 @@
       \item Vista.vim \myurl{https://github.com/liuchengxu/vista.vim}
     \end{itemize} 
   \end{block}
-  Fast navigation through \textit{tags} with FZF!
+  :BTags -- fast navigation through \textit{tags} with fzf.vim!
   	
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
